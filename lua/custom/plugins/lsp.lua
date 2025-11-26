@@ -113,43 +113,9 @@ return {
                 enable = false,
                 url = "",
               },
-              -- schemas = require("schemastore").yaml.schemas(),
             },
           },
         },
-
-        -- ols = {},
-        -- racket_langserver = { manual_install = true },
-        -- roc_ls = { manual_install = true },
-
-        -- ocamllsp = {
-        --   manual_install = true,
-        --   -- cmd = { "dune", "tools", "exec", "ocamllsp" },
-        --   -- cmd = { "dune", "exec", "ocamllsp" },
-        --   cmd = { "ocamllsp" },
-        --   settings = {
-        --     codelens = { enable = true },
-        --     inlayHints = { enable = true },
-        --     syntaxDocumentation = { enable = true },
-        --   },
-        --
-        --   server_capabilities = { semanticTokensProvider = false },
-        --
-        --   -- TODO: Check if i still need the filtypes stuff i had before
-        -- },
-
-        -- gleam = {
-        --   manual_install = true,
-        -- },
-
-        -- lexical = {
-        --   cmd = { "/home/tjdevries/.local/share/nvim/mason/bin/lexical", "server" },
-        --   root_dir = require("lspconfig.util").root_pattern { "mix.exs" },
-        --   server_capabilities = {
-        --     completionProvider = vim.NIL,
-        --     definitionProvider = true,
-        --   },
-        -- },
 
         clangd = {
           -- cmd = { "clangd", unpack(require("custom.clangd").flags) },
@@ -211,7 +177,6 @@ return {
       local ensure_installed = {
         "stylua",
         "lua_ls",
-        "delve",
         -- "tailwind-language-server",
       }
 

@@ -10,23 +10,21 @@ keymap.set("n", "<leader>Y", [["+Y]])
 
 keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>", { desc = "Execute the current file" })
 
-
-
-keymap.set("n", "<M-j>", function()
-  if vim.opt.diff:get() then
-    vim.cmd [[normal! ]c]]
-  else
-    vim.cmd [[m .+1<CR>==]]
-  end
-end)
-
-keymap.set("n", "<M-k>", function()
-  if vim.opt.diff:get() then
-    vim.cmd [[normal! [c]]
-  else
-    vim.cmd [[m .-2<CR>==]]
-  end
-end)
+-- keymap.set("n", "<M-j>", function()
+--   if vim.opt.diff:get() then
+--     vim.cmd [[normal! ]c]]
+--   else
+--     vim.cmd [[m .+1<CR>==]]
+--   end
+-- end)
+--
+-- keymap.set("n", "<M-k>", function()
+--   if vim.opt.diff:get() then
+--     vim.cmd [[normal! [c]]
+--   else
+--     vim.cmd [[m .-2<CR>==]]
+--   end
+-- end)
 
 keymap.set("n", "<space>tt", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = 0 }, { bufnr = 0 })
@@ -52,11 +50,6 @@ keymap.set("n", "<c-k>", "<c-w><c-k>")
 keymap.set("n", "<c-l>", "<c-w><c-l>")
 keymap.set("n", "<c-h>", "<c-w><c-h>")
 
-
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
-keymap.set("n", "J", "mzJ`z")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
