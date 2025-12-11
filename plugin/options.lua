@@ -13,6 +13,8 @@ opt.ignorecase = true
 opt.number = true
 opt.relativenumber = true
 
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 opt.clipboard = ""
 
 opt.splitbelow = true
